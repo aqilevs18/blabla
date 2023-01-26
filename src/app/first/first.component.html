@@ -1,0 +1,24 @@
+<button (click)="click()">load users</button>
+<p *ngIf="list" class="list">list is empty</p>
+<p *ngIf="loading">loading</p>
+<div class="first" *ngIf="showuser">
+  <p>users: {{ users[0].firstName }}, {{ users[1].firstName }}, {{ users[2].firstName }}</p>
+  <div *ngFor="let user of users">
+    <div class="card" cardColor color="{{ user.status }}">
+      <ul>
+        <li>{{ user.firstName }} {{ user.lastName }}</li>
+        <li>{{ user.about }}</li>
+        <li>{{ user.birthDate.year | datePipe }} year old</li>
+      </ul>
+      <div class="status" statusColor color="{{ user.status }}">
+        {{ user.status }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- <ng-container *ngTemplateOutlet="card"></ng-container>
+
+<ng-template #card> 
+
+</ng-template> -->

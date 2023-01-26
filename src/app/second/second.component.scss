@@ -1,0 +1,13 @@
+.second {
+    display: flex;
+    flex-direction: row;
+    gap:3px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    div {
+      width: 20px;
+      height: 20px;
+    }
+    height: 180px;
+    width: 180px;
+  }
